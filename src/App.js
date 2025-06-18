@@ -7,10 +7,10 @@ import { FaProjectDiagram, FaBlog, FaTools, FaEnvelope } from "react-icons/fa";
 function Navbar() {
   return (
     <nav className="bg-gray-900 text-white p-4 flex justify-between shadow-md">
-      <h1 className="text-xl font-bold">Kartik's Portfolio</h1>
+      <h1 className="text-xl font-bold">Kartik's Profile</h1>
       <div className="space-x-4">
         <Link to="/" className="hover:text-gray-300">Home</Link>
-        <Link to="/techstack" className="hover:text-gray-300">Tech Stack</Link>
+        <Link to="/techstack" className="hover:text-gray-300">Skills</Link>
         <Link to="/projects" className="hover:text-gray-300">Projects</Link>
         <Link to="/blogs" className="hover:text-gray-300">Blogs</Link>
       </div>
@@ -35,15 +35,30 @@ function Home() {
           </div>
         </div>
 
+       <div className="mt-10">
+  <h3 className="text-2xl font-bold mb-2">About Me</h3>
+  <p>I’m Kartik, a performance engineer transitioning into the world of SDET. I completed my <strong>B.Tech in Computer Engineering</strong> from <strong>Birla Insitute of Technology, Mesra</strong>in the year 2023, where I built a strong foundation in operating systems, algorithms, databases and hands-on project development.</p>
+  <p className="mt-2">Professionally, I focus on building scalable automation frameworks and ensuring product reliability through performance and functional testing. I enjoy working at the intersection of performance engineering, manual testing and automation systems — crafting robust test strategies for both APIs and UI workflows.</p>
+  <p className="mt-2">Beyond work, I’m a curious traveller who loves <strong>reading</strong>, <strong>gaming</strong>, and <strong>exploring new places</strong>. I’m also an <strong>animal lover</strong> and have volunteered for <strong>animal rescue and awareness causes</strong> — something that keeps me grounded and connected to the community. 🐾</p>
+  <p className="mt-2">I’m driven by the belief that great products come from well-tested code, clear collaboration, and continuous learning.</p>
+</div>
+
+
         <div className="mt-10">
-          <h3 className="text-2xl font-bold mb-2">About Me</h3>
-          <p>I’m a curious engineer who enjoys building test strategies and frameworks that scale. With a strong foundation in both backend systems and automation tools, I strive to continuously learn and evolve as an SDET.</p>
+          <h3 className="text-2xl font-bold mb-2">Skills & Tech Stack</h3>
+          <ul className="list-disc list-inside space-y-1">
+            <li><strong>Languages:</strong> Java, Python, Groovy</li>
+            <li><strong>Automation:</strong> Selenium, TestNG, Cucumber, RestAssured</li>
+            <li><strong>Performance Testing:</strong> JMeter, Gatling</li>
+            <li><strong>Monitoring & CI/CD:</strong> Grafana, Jenkins, Docker</li>
+            <li><strong>Tools I Use:</strong> GitHub, Postman, ChatGPT</li>
+          </ul>
         </div>
 
         <div className="mt-10">
           <h3 className="text-2xl font-bold mb-2">Connect with Me <FaEnvelope className="inline ml-2" /></h3>
           <ul className="space-y-1">
-            <li>Email: kartik.sharma@email.com</li>
+            <li>Email: kartiksharmajaipur00@gmail.com</li>
             <li>LinkedIn: <a className="text-blue-400 underline" href="https://linkedin.com/in/kartik-sharma-b40761" target="_blank" rel="noopener noreferrer">linkedin.com/in/kartiksharma</a></li>
             <li>GitHub: <a className="text-blue-400 underline" href="https://github.com/Kartik393" target="_blank" rel="noopener noreferrer">github.com/kartiksharma</a></li>
           </ul>
@@ -53,15 +68,37 @@ function Home() {
   );
 }
 
-function TechStack() {
+function Skills() {
   return (
     <div className="p-6 bg-gray-900 text-white min-h-screen">
-      <h2 className="text-2xl font-semibold flex items-center gap-2"><FaTools /> Tech Stack</h2>
-      <ul className="list-disc list-inside mt-2 space-y-1">
-        <li><strong>Languages:</strong> Java, Python, Scala</li>
-        <li><strong>Frameworks:</strong> Selenium, TestNG, Cucumber, RestAssured, JMeter, Gatling</li>
-        <li><strong>Tools:</strong> Jenkins, Docker, Grafana</li>
-      </ul>
+      <h2 className="text-2xl font-semibold flex items-center gap-2"><FaTools /> Technical Skills</h2>
+
+      <div className="mt-6 space-y-6">
+        <div>
+          <h3 className="text-xl font-bold">💻 Languages</h3>
+          <p className="mt-1">Java, Groovy, Python — used for writing test scripts, backend validations, and simulations.</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold">🧪 Automation Frameworks</h3>
+          <p className="mt-1">Selenium, TestNG, JUnit, Cucumber, and RestAssured for end-to-end and API testing with assertions, reports, and BDD syntax.</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold">⚡ Performance Testing</h3>
+          <p className="mt-1">Load and stress testing using JMeter and Gatling; familiar with thread groups, assertions, and scripting custom test plans.</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold">🔧 CI/CD & Monitoring</h3>
+          <p className="mt-1">Hands-on with Jenkins pipelines, Docker containerization, and Grafana dashboards for monitoring real-time metrics.</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold">📚 Tools & Utilities</h3>
+          <p className="mt-1">GitHub, Postman, Jira, MobaXterm, Azure — used across development, collaboration, and debugging phases.</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -100,14 +137,13 @@ function Blogs() {
   return (
     <div className="relative min-h-screen">
       <img
-        src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg?auto=compress&cs=tinysrgb&w=1200"
         alt="workspace"
         className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
       />
       <div className="relative z-10 p-6 bg-gray-900 bg-opacity-80 text-white min-h-screen">
         <h2 className="text-2xl font-semibold flex items-center gap-2"><FaBlog /> Blogs</h2>
-        <p className="mt-2">Coming soon! Planning posts on performance testing, automation strategies, and career tips.</p>
-        <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" alt="blog" className="mt-4 rounded-xl shadow" />
+        <p className="mt-2">Coming soon! Planning blog posts on tech, games, movies or other interesting topic which you will enjoy.</p>
       </div>
     </div>
   );
@@ -119,7 +155,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/techstack" element={<TechStack />} />
+        <Route path="/techstack" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />} />
       </Routes>
