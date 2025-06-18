@@ -37,7 +37,7 @@ function Home() {
 
        <div className="mt-10">
   <h3 className="text-2xl font-bold mb-2">About Me</h3>
-  <p>I’m Kartik, a performance engineer transitioning into the world of SDET. I completed my <strong>B.Tech in Computer Engineering</strong> from <strong>Birla Insitute of Technology, Mesra</strong>in the year 2023, where I built a strong foundation in operating systems, algorithms, databases and hands-on project development.</p>
+  <p>I’m Kartik, a performance engineer transitioning into the world of SDET. I completed my <strong>B.Tech in Computer Engineering</strong> from <strong>Birla Insitute of Technology, Mesra</strong> in the year 2023, where I built a strong foundation in systems, algorithms, databases and hands-on project development.</p>
   <p className="mt-2">Professionally, I focus on building scalable automation frameworks and ensuring product reliability through performance and functional testing. I enjoy working at the intersection of performance engineering, manual testing and automation systems — crafting robust test strategies for both APIs and UI workflows.</p>
   <p className="mt-2">Beyond work, I’m a curious traveller who loves <strong>reading</strong>, <strong>gaming</strong>, and <strong>exploring new places</strong>. I’m also an <strong>animal lover</strong> and have volunteered for <strong>animal rescue and awareness causes</strong> — something that keeps me grounded and connected to the community. 🐾</p>
   <p className="mt-2">I’m driven by the belief that great products come from well-tested code, clear collaboration, and continuous learning.</p>
