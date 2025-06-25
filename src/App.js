@@ -37,21 +37,20 @@ function Home() {
 
        <div className="mt-10">
   <h3 className="text-2xl font-bold mb-2">About Me</h3>
-  <p>I’m Kartik, a performance engineer transitioning into the world of SDET. I completed my <strong>B.Tech in Computer Engineering</strong> from <strong>Birla Insitute of Technology, Mesra</strong> in the year 2023, where I built a strong foundation in systems, algorithms, databases and hands-on project development.</p>
+  <p>I’m Kartik, a Performance Engineer transitioning into the world of Software Testing. I completed my <strong>B.Tech in Computer Engineering</strong> from <strong>Birla Insitute of Technology, Mesra</strong> in the year 2023, where I built a strong foundation in systems, algorithms, databases and hands-on project development.</p>
   <p className="mt-2">Professionally, I focus on building scalable automation frameworks and ensuring product reliability through performance and functional testing. I enjoy working at the intersection of performance engineering, manual testing and automation systems — crafting robust test strategies for both APIs and UI workflows.</p>
-  <p className="mt-2">Beyond work, I’m a curious traveller who loves <strong>reading</strong>, <strong>gaming</strong>, and <strong>exploring new places</strong>. I’m also an <strong>animal lover</strong> and have volunteered for <strong>animal rescue and awareness causes</strong> — something that keeps me grounded and connected to the community. 🐾</p>
-  <p className="mt-2">I’m driven by the belief that great products come from well-tested code, clear collaboration, and continuous learning.</p>
+  <p> I’m also an <strong>animal lover</strong> and have volunteered for <strong>animal rescue and awareness causes</strong> — something that keeps me grounded and connected to the community. 🐾</p>
 </div>
 
 
         <div className="mt-10">
           <h3 className="text-2xl font-bold mb-2">Skills & Tech Stack</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Languages:</strong> Java, Python, Groovy</li>
-            <li><strong>Automation:</strong> Selenium, TestNG, Cucumber, RestAssured</li>
-            <li><strong>Performance Testing:</strong> JMeter, Gatling</li>
+            <li><strong>Languages:</strong> Java, Python, Groovy, Gherkin</li>
+            <li><strong>Automation & API Testing:</strong> Selenium, TestNG, Cucumber, RestAssured</li>
+            <li><strong>Performance Testing:</strong> JMeter, Gatling, Scripting</li>
             <li><strong>Monitoring & CI/CD:</strong> Grafana, Jenkins, Docker</li>
-            <li><strong>Tools I Use:</strong> GitHub, Postman, ChatGPT</li>
+            <li><strong>Tools I Use:</strong> GitHub, Postman, ChatGPT, Jira</li>
           </ul>
         </div>
 
@@ -76,12 +75,12 @@ function Skills() {
       <div className="mt-6 space-y-6">
         <div>
           <h3 className="text-xl font-bold">💻 Languages</h3>
-          <p className="mt-1">Java, Groovy, Python — used for writing test scripts, backend validations, and simulations.</p>
+          <p className="mt-1">Java, Groovy, Scala — used for writing test scripts, backend validations, and simulations.</p>
         </div>
 
         <div>
           <h3 className="text-xl font-bold">🧪 Automation Frameworks</h3>
-          <p className="mt-1">Selenium, TestNG, JUnit, Cucumber, and RestAssured for end-to-end and API testing with assertions, reports, and BDD syntax.</p>
+          <p className="mt-1">Selenium, TestNG, JUnit, Cucumber, and RestAssured for end-to-end and API testing and Automation with assertions, reports, and BDD syntax.</p>
         </div>
 
         <div>
@@ -96,7 +95,7 @@ function Skills() {
 
         <div>
           <h3 className="text-xl font-bold">📚 Tools & Utilities</h3>
-          <p className="mt-1">GitHub, Postman, Jira, MobaXterm, Azure — used across development, collaboration, and debugging phases.</p>
+          <p className="mt-1">GitHub, Postman, Jira, MobaXterm, Azure, Agile— used across development, collaboration, and debugging phases.</p>
         </div>
       </div>
     </div>
@@ -143,22 +142,45 @@ function Blogs() {
       />
       <div className="relative z-10 p-6 bg-gray-900 bg-opacity-80 text-white min-h-screen">
         <h2 className="text-2xl font-semibold flex items-center gap-2"><FaBlog /> Blogs</h2>
-        <p className="mt-2">Coming soon! Planning blog posts on tech, games, movies or other interesting topic which you will enjoy.</p>
+        <p className="mt-2">Coming soon! Planning blog posts on tech, games, movies and other interesting topic which you will definitely enjoy.</p>
       </div>
     </div>
   );
 }
 
+function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white text-center p-4 mt-auto">
+      <p className="text-sm">
+        © {new Date().getFullYear()} Kartik Sharma. Built with ❤️ using React & Tailwind CSS.
+      </p>
+      <div className="mt-2">
+        <img
+          src="https://hitwebcounter.com/counter/counter.php?page=20986565&style=0007&nbdigits=5&type=page&initCount=1" title="Counter Widget" Alt="Visit counter For Websites"
+          title="Website Counter"
+          alt="visitor counter"
+        />
+      </div>
+    </footer>
+  );
+}
+
+
 export default function App() {
   return (
     <Router>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Routes>
+        <div className="flex-grow">
+          <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/techstack" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />} />
-      </Routes>
+          </Routes>
+        </div>
+       <Footer />
+    </div>
     </Router>
   );
 }
