@@ -156,7 +156,7 @@ function Footer() {
       </p>
       <div className="mt-2">
         <img
-          src="https://hitwebcounter.com/counter/counter.php?page=20986565&style=0007&nbdigits=5&type=page&initCount=1" title="Counter Widget" Alt="Visit counter For Websites"
+          src="https://hitwebcounter.com/counter/counter.php?page=20986565&style=0007&nbdigits=5&type=page&initCount=1" 
           title="Website Counter"
           alt="visitor counter"
         />
